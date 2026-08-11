@@ -16,7 +16,18 @@ document.addEventListener('keydown', event => { if (event.key === 'Escape') clos
 document.querySelectorAll('[data-form]').forEach(form => form.addEventListener('submit', event => {
   event.preventDefault();
   if (!form.checkValidity()) return form.reportValidity();
-  form.reset(); closeModal(); toast.classList.add('show');
+  form.reset(); closeModal();
+  toast.textContent = 'Спасибо! Заявка принята.';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}));
+
+document.querySelectorAll('[data-availability-form]').forEach(form => form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (!form.checkValidity()) return form.reportValidity();
+  form.reset();
+  toast.textContent = 'Адрес принят — скоро сообщим о возможности подключения.';
+  toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 3500);
 }));
 

@@ -1,0 +1,235 @@
+/* Shared responsive safeguards */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+button,
+.hero-intro__button,
+.mobile-call,
+.menu--new,
+.city-trigger {
+  min-height: 44px;
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .connection-check__inner {
+    padding: 40px;
+  }
+
+  .connection-check__visual {
+    position: static;
+    width: min(300px, 100%);
+    height: 220px;
+    margin: 28px auto 0;
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  .connection-check__visual img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .connection-check__form-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    padding: 76px 0;
+  }
+
+  .connection-check__inner {
+    padding: 36px;
+  }
+
+  .benefit-card {
+    min-height: 245px;
+  }
+
+  .policy-header__inner,
+  .policy-main {
+    width: min(840px, calc(100% - 48px));
+  }
+
+  .policy-card {
+    overflow-x: auto;
+  }
+
+  .policy-card table {
+    min-width: 680px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .hero--intro {
+    padding: 48px 24px;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(46px, 11vw, 58px);
+  }
+
+  .connection-check__inner {
+    padding: 32px 24px;
+  }
+
+  .connection-check__lead {
+    font-size: 15px;
+  }
+
+  .tariff-card {
+    padding: 21px;
+  }
+
+  .policy-header__inner,
+  .policy-main {
+    width: min(840px, calc(100% - 32px));
+  }
+}
+
+@media (max-width: 479px) {
+  .section {
+    padding: 54px 0;
+  }
+
+  .hero--intro {
+    min-height: calc(100svh - 136px);
+    padding: 36px 16px;
+  }
+
+  .hero-intro__eyebrow {
+    font-size: 10px;
+    letter-spacing: .08em;
+  }
+
+  .hero-intro h1 {
+    font-size: clamp(40px, 14vw, 49px);
+    letter-spacing: -.06em;
+  }
+
+  .hero-intro__lead {
+    font-size: 16px;
+  }
+
+  .hero-intro__button {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+
+  .connection-check__inner {
+    padding: 28px 18px;
+    border-radius: 14px;
+  }
+
+  .connection-check h2 {
+    font-size: 28px;
+  }
+
+  .connection-check__field,
+  .connection-check__form-row .button {
+    min-height: 50px;
+  }
+
+  .section-heading p,
+  .equipment__heading p,
+  .consult__content > p:last-child {
+    font-size: 14px;
+  }
+
+  .tariff-card {
+    padding: 20px;
+  }
+
+  .tariff-card .button {
+    min-height: 44px;
+  }
+
+  .benefit-card h3 {
+    font-size: 23px;
+  }
+
+  .benefit-card p {
+    font-size: 14px;
+  }
+
+  .equipment-specs div {
+    grid-template-columns: minmax(104px, 41%) minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .equipment-card__details,
+  .equipment-card__price {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .cities__list {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .cities__list a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer__brand img {
+    width: 165px;
+  }
+
+  .modal {
+    padding: 14px;
+  }
+
+  .modal__box {
+    max-height: calc(100svh - 28px);
+    padding: 24px 20px;
+    overflow-y: auto;
+  }
+
+  .modal__box h2 {
+    font-size: 25px;
+  }
+
+  .policy-header__inner,
+  .policy-main {
+    width: min(840px, calc(100% - 28px));
+  }
+
+  .policy-header__inner {
+    gap: 14px;
+  }
+
+  .policy-back {
+    font-size: 13px;
+  }
+}

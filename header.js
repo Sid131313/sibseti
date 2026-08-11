@@ -8,6 +8,12 @@
 
   if (!header || !cityTrigger || !cityPanel) return;
 
+  const cityLinks = document.querySelectorAll('.city-panel a, .cities__list a');
+  cityLinks.forEach(link => {
+    const city = link.textContent.trim();
+    link.href = `city.html?city=${encodeURIComponent(city)}`;
+  });
+
   const setCityOpen = open => {
     header.classList.toggle('is-city-open', open);
     cityPanel.setAttribute('aria-hidden', String(!open));
@@ -19,6 +25,11 @@
     menu?.setAttribute('aria-expanded', String(open));
     if (open) setCityOpen(false);
   };
+  const updateScrolledState = () => {
+    const isScrolled = window.scrollY > 100;
+    header.classList.toggle('header--scrolled', isScrolled);
+    if (isScrolled) setCityOpen(false);
+  };
 
   const storedCity = localStorage.getItem('sibseti-city');
   if (storedCity && cityName) cityName.textContent = storedCity;
@@ -26,6 +37,8 @@
   cityTrigger.addEventListener('click', () => setCityOpen(!header.classList.contains('is-city-open')));
   closeCity?.addEventListener('click', () => setCityOpen(false));
   menu?.addEventListener('click', () => setMenuOpen(!header.classList.contains('is-menu-open')));
+  window.addEventListener('scroll', updateScrolledState, { passive: true });
+  updateScrolledState();
 
   cityPanel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
     const city = link.textContent.trim();
