@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Домашний интернет и телевидение — Сибсети" />
+  <title>Сибсети — интернет и телевидение</title>
+  <link rel="icon" href="img/favicon/favicon-svg.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/favicon/favicon-96x96.png" type="image/png" sizes="96x96" />
+  <link rel="shortcut icon" href="img/favicon/favicon%20(1).ico" />
+  <link rel="apple-touch-icon" href="img/favicon/android-chrome-512x512.png" />
+  <meta name="theme-color" content="#1761f7" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="hero-visibility.css" />
+  <link rel="stylesheet" href="fonts.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="wrap header__top-inner">
+        <a class="support-link" href="tel:+73833055217">Тех. поддержка</a>
+        <a class="connection-link" href="tel:+79235128301"><span>Подключение:</span> 8 (923) 512-83-01</a>
+        <button class="city-trigger" type="button" aria-expanded="false" aria-controls="city-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.05 7-12a7 7 0 1 0-14 0c0 5.95 7 12 7 12Z"/><circle cx="12" cy="9" r="2.35"/></svg><span data-current-city>Новосибирск</span></button>
+      </div>
+    </div>
+    <div class="wrap header__inner">
+      <a class="logo logo--image" href="https://sibsetipro.ru/" aria-label="Сибирские сети"><img src="img/sibseti.png" alt="Сибсети" /></a>
+      <nav class="nav nav--new" aria-label="Основная навигация"><a href="#internet">Домашний интернет</a><a href="#tv">Интернет + ТВ</a><a href="#tv">Цифровое ТВ</a></nav>
+      <button class="button button--blue header__button" data-modal="callback">Заказать звонок</button>
+      <a class="mobile-call" href="tel:+79235128301" aria-label="Позвонить"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.1 3.6 4.9 5.1c-.7.5-1 1.3-.8 2.1 1.5 6.9 6.9 12.3 13.8 13.8.8.2 1.6-.1 2.1-.8l1.5-2.2c.5-.8.4-1.8-.3-2.4l-2.4-2c-.6-.5-1.5-.5-2.1 0l-1.4 1.1a11.5 11.5 0 0 1-6-6l1.1-1.4c.5-.6.5-1.5 0-2.1l-2-2.4c-.6-.7-1.6-.8-2.3-.3Z"/></svg></a>
+      <button class="menu menu--new" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="wrap header__inner header__inner--legacy">
+      <a class="logo" href="#top" aria-label="Сибсети"><span>сиб</span>сети<i></i></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#internet">Интернет</a><a href="#tv">Интернет + ТВ</a><a href="#equipment">Оборудование</a><a href="#cities">Города</a>
+      </nav>
+      <div class="header__contact"><small>Подключение</small><a href="tel:+79235128301">8 923 512-83-01</a></div>
+      <button class="button button--dark header__button" data-modal="callback">Заказать звонок</button>
+      <button class="menu" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    </div>
+    <div class="city-panel" id="city-panel" aria-hidden="true">
+      <div class="wrap city-panel__inner">
+        <div class="city-panel__heading"><div><p>Города подключения</p><h2>Выберите свой город</h2></div><button class="city-panel__close" type="button" aria-label="Закрыть">×</button></div>
+        <div class="city-grid">
+          <section><h3>Новосибирская область</h3><div><a href="https://sibsetipro.ru/akademgorodok/">Академгородок</a><a href="https://sibsetipro.ru/barabinsk/">Барабинск</a><a href="https://sibsetipro.ru/berdsk/">Бердск</a><a href="https://sibsetipro.ru/iskitim/">Искитим</a><a href="https://sibsetipro.ru/karasuk/">Карасук</a><a href="https://sibsetipro.ru/koltsovo/">Кольцово рп</a><a href="https://sibsetipro.ru/kuybyshev/">Куйбышев</a><a href="https://sibsetipro.ru/linevo/">Линёво рп</a><a class="is-current" href="https://sibsetipro.ru/">Новосибирск</a><a href="https://sibsetipro.ru/ob/">Обь</a></div></section>
+          <section><h3>Кемеровская область</h3><div><a href="https://sibsetipro.ru/anzhero-sudzhensk/">Анжеро-Судженск</a><a href="https://sibsetipro.ru/bachatskiy/">Бачатский пгт</a><a href="https://sibsetipro.ru/belovo/">Белово</a><a href="https://sibsetipro.ru/berezovskiy/">Березовский</a><a href="https://sibsetipro.ru/gramoteino/">Грамотеино пгт</a><a href="https://sibsetipro.ru/gurevsk/">Гурьевск</a><a href="https://sibsetipro.ru/inskoy/">Инской пгт</a><a href="https://sibsetipro.ru/kaltan/">Калтан</a><a href="https://sibsetipro.ru/kemerovo/">Кемерово</a><a href="https://sibsetipro.ru/kiselevsk/">Киселёвск</a><a href="https://sibsetipro.ru/leninsk-kuznetskiy/">Ленинск-Кузнецкий</a><a href="https://sibsetipro.ru/mezhdurechensk/">Междуреченск</a><a href="https://sibsetipro.ru/myski/">Мыски</a><a href="https://sibsetipro.ru/novokuznetsk/">Новокузнецк</a><a href="https://sibsetipro.ru/novyy-gorodok/">Новый городок пгт</a><a href="https://sibsetipro.ru/osinniki/">Осинники</a><a href="https://sibsetipro.ru/polysaevo/">Полысаево</a><a href="https://sibsetipro.ru/prokopevsk/">Прокопьевск</a><a href="https://sibsetipro.ru/salair/">Салаир</a><a href="https://sibsetipro.ru/topki/">Топки</a><a href="https://sibsetipro.ru/yurga/">Юрга</a><a href="https://sibsetipro.ru/iganino/">Иганино с</a></div></section>
+          <section><h3>Алтайский край</h3><div><a href="https://sibsetipro.ru/barnaul/">Барнаул</a><a href="https://sibsetipro.ru/biysk/">Бийск</a><a href="https://sibsetipro.ru/zarinsk/">Заринск</a><a href="https://sibsetipro.ru/novoaltaysk/">Новоалтайск</a><a href="https://sibsetipro.ru/rubtsovsk/">Рубцовск</a></div><h3>Красноярский край</h3><div><a href="https://sibsetipro.ru/abakan/">Абакан</a><a href="https://sibsetipro.ru/achinsk/">Ачинск</a><a href="https://sibsetipro.ru/borodino/">Бородино</a><a href="https://sibsetipro.ru/divnogorsk/">Дивногорск</a><a href="https://sibsetipro.ru/zaozernyy/">Заозерный</a><a href="https://sibsetipro.ru/zelenogorsk/">Зеленогорск</a><a href="https://sibsetipro.ru/krasnoyarsk/">Красноярск</a><a href="https://sibsetipro.ru/lesosibirsk/">Лесосибирск</a><a href="https://sibsetipro.ru/minusinsk/">Минусинск</a><a href="https://sibsetipro.ru/nazarovo/">Назарово</a><a href="https://sibsetipro.ru/chernogorsk/">Черногорск</a></div></section>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero hero--intro">
+      <div class="hero-intro wrap">
+        <p class="hero-intro__eyebrow">Интернет и телевидение для дома</p>
+        <h1>Мы — <span>Сибсети</span></h1>
+        <p class="hero-intro__lead">Надёжный оператор связи для вашего дома: подключаем быстро, предлагаем прозрачные условия и остаёмся на связи 24/7.</p>
+        <a class="hero-intro__button" href="#internet">Выбрать тариф <span>→</span></a>
+      </div>
+      <div class="hero__orb hero__orb--one"></div><div class="hero__orb hero__orb--two"></div>
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Домашний интернет и телевидение</p>
+          <h1>Интернет, который<br />всегда <em>на скорости</em></h1>
+          <p class="hero__lead">Подключим надёжный интернет и ТВ в Новосибирске. Скорость до 750 Мбит/с, подключение — 0 ₽.</p>
+          <a class="button button--lime" href="#internet">Выбрать тариф <span>→</span></a>
+          <div class="hero__benefits"><div><b>750</b><span>Мбит/с<br />максимум</span></div><div><b>0 ₽</b><span>стоимость<br />подключения</span></div><div><b>24/7</b><span>техническая<br />поддержка</span></div></div>
+        </div>
+        <form class="form hero__form" data-form>
+          <p class="form__caption">Заявка на подключение</p><h2>Оставьте контакты —<br />перезвоним <span>за 15 минут</span></h2>
+          <label><span>Ваше имя</span><input name="name" required placeholder="Иван" /></label>
+          <label><span>Телефон</span><input name="phone" required inputmode="tel" placeholder="+7 (___) ___-__-__" /></label>
+          <label><span>Адрес подключения</span><input name="address" required placeholder="Улица, дом" /></label>
+          <button class="button button--dark" type="submit">Отправить заявку <span>→</span></button>
+          <small>Нажимая кнопку, вы соглашаетесь с <a href="#privacy">политикой конфиденциальности</a></small>
+        </form>
+      </div>
+    </section>
+
+    <section class="tariffs section" id="internet">
+      <div class="wrap"><p class="eyebrow eyebrow--green">Домашний интернет</p><div class="section-heading"><h2>Выберите свою<br /><em>скорость</em></h2><p>4 актуальных тарифа на интернет со скоростью до 750 Мбит/с.</p></div>
+        <div class="tariff-grid">
+          <article class="tariff-card"><p class="tariff-card__name">На все 100</p><div class="speed"><b>100</b><span>Мбит/с</span></div><ul><li>Безлимитный интернет</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>750 ₽</b><span>/ месяц</span></div><button class="button button--outline" data-modal="tariff" data-tariff="На все 100">Подключить</button></article>
+          <article class="tariff-card tariff-card--featured"><span class="tag">Выбор клиентов</span><p class="tariff-card__name">На все 300</p><div class="speed"><b>300</b><span>Мбит/с</span></div><ul><li>Безлимитный интернет</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>800 ₽</b><span>/ месяц</span></div><button class="button button--lime" data-modal="tariff" data-tariff="На все 300">Подключить</button></article>
+          <article class="tariff-card"><p class="tariff-card__name">На все 500</p><div class="speed"><b>500</b><span>Мбит/с</span></div><ul><li>Безлимитный интернет</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>950 ₽</b><span>/ месяц</span></div><button class="button button--outline" data-modal="tariff" data-tariff="На все 500">Подключить</button></article>
+          <article class="tariff-card"><p class="tariff-card__name">На все 750</p><div class="speed"><b>750</b><span>Мбит/с</span></div><ul><li>Безлимитный интернет</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>1 150 ₽</b><span>/ месяц</span></div><button class="button button--outline" data-modal="tariff" data-tariff="На все 750">Подключить</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tariffs tariffs--blue section" id="tv">
+      <div class="wrap"><p class="eyebrow">Интернет и телевидение</p><div class="section-heading"><h2>Всё для<br /><em>ярких вечеров</em></h2><p>Интернет до 750 Мбит/с и цифровое телевидение от 150 каналов.</p></div>
+        <div class="tariff-grid">
+          <article class="tariff-card"><p class="tariff-card__name">Смотри онлайн</p><div class="speed"><b>100</b><span>Мбит/с</span></div><ul><li>150 ТВ-каналов</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>840 ₽</b><span>/ месяц</span></div><button class="button button--outline" data-modal="tariff" data-tariff="Смотри онлайн">Подключить</button></article>
+          <article class="tariff-card tariff-card--featured"><span class="tag">Выгодно</span><p class="tariff-card__name">Смотри онлайн 300</p><div class="speed"><b>300</b><span>Мбит/с</span></div><ul><li>150 ТВ-каналов</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>980 ₽</b><span>/ месяц</span></div><button class="button button--lime" data-modal="tariff" data-tariff="Смотри онлайн 300">Подключить</button></article>
+          <article class="tariff-card"><p class="tariff-card__name">Всё включено</p><div class="speed"><b>500</b><span>Мбит/с</span></div><ul><li>200 ТВ-каналов</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>1 150 ₽</b><span>/ месяц</span></div><button class="button button--outline" data-modal="tariff" data-tariff="Всё включено">Подключить</button></article>
+          <article class="tariff-card"><p class="tariff-card__name">Всё включено 750</p><div class="speed"><b>750</b><span>Мбит/с</span></div><ul><li>200 ТВ-каналов</li><li>Wi‑Fi роутер</li><li>Подключение 0 ₽</li></ul><div class="price"><b>1 450 ₽</b><span>/ месяц</span></div><button class="button button--outline" data-modal="tariff" data-tariff="Всё включено 750">Подключить</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="equipment section" id="equipment"><div class="wrap"><p class="eyebrow eyebrow--green">Оборудование</p><div class="section-heading"><h2>Техника для<br /><em>вашего дома</em></h2><p>Поможем подобрать оборудование и настроим его при подключении.</p></div>
+      <div class="equipment__grid"><article class="device"><div class="device__picture router"><div class="antenna a1"></div><div class="antenna a2"></div><div class="router-box"><i></i><i></i><i></i></div></div><h3>Wi‑Fi роутер Cudy WR1200</h3><p>До 867 Мбит/с на частоте 5 ГГц, 3 LAN-порта.</p><b>от 1 400 ₽/мес.</b></article><article class="device"><div class="device__picture router router--dark"><div class="antenna a1"></div><div class="antenna a2"></div><div class="router-box"><i></i><i></i><i></i></div></div><h3>Cudy WR1500 Wi‑Fi 6</h3><p>Гигабитный роутер нового поколения Wi‑Fi 6.</p><b>от 1 800 ₽/мес.</b></article><article class="device"><div class="device__picture tvbox"><div class="tvbox__body"><span>B‑OptiX</span><i></i></div></div><h3>Приставка B‑OptiX BO400W2G</h3><p>Android TV, Wi‑Fi, 2 USB-порта и HDMI.</p><b>от 1 950 ₽/мес.</b></article></div>
+    </div></section>
+
+    <section class="consult"><div class="wrap consult__inner"><div><p class="eyebrow">Остались вопросы?</p><h2>Поможем выбрать<br /><em>лучший тариф</em></h2><p>Оставьте номер телефона — специалист перезвонит для консультации.</p></div><form class="consult__form" data-form><input name="name" required placeholder="Ваше имя" /><input name="phone" required placeholder="Телефон" /><button class="button button--lime">Заказать консультацию <span>→</span></button></form></div></section>
+
+    <section class="cities section" id="cities"><div class="wrap"><p class="eyebrow eyebrow--green">География подключения</p><h2>Подключаем в <em>городах Сибири</em></h2><div class="cities__columns"><div><h3>Новосибирская область</h3><p>Академгородок · Барабинск · Бердск · Искитим · Карасук · Кольцово · Куйбышев · Новосибирск · Обь</p></div><div><h3>Кемеровская область</h3><p>Анжеро‑Судженск · Белово · Берёзовский · Гурьевск · Кемерово · Новокузнецк · Прокопьевск · Топки · Юрга</p></div><div><h3>Алтайский и Красноярский края</h3><p>Барнаул · Бийск · Заринск · Рубцовск · Абакан · Ачинск · Дивногорск · Красноярск · Минусинск</p></div></div></div></section>
+  </main>
+  <footer class="footer" id="privacy"><div class="wrap footer__grid"><div><a class="logo logo--footer" href="#top"><span>сиб</span>сети<i></i></a><p>Интернет и телевидение<br />для дома в Новосибирске</p></div><div><p class="footer__label">Адрес офиса</p><p>ул. Салтыкова‑Щедрина, 118<br />Пн–Пт: 09:00–20:00<br />Сб–Вс: 09:00–18:00</p></div><div><p class="footer__label">Связаться с нами</p><a href="tel:+79235128301">8 923 512-83-01</a><small>Отдел подключения</small><a href="tel:+73833055217">8 (383) 305-52-17</a><small>Техническая поддержка</small></div></div><div class="wrap footer__bottom">© 2026 Сибсети. Информация на сайте носит справочный характер. <a href="#privacy">Политика конфиденциальности</a></div></footer>
+  <div class="modal" id="modal"><div class="modal__box"><button class="modal__close" aria-label="Закрыть">×</button><p class="eyebrow eyebrow--green">Подключение</p><h2 id="modal-title">Оставьте заявку</h2><p class="modal__text">Специалист свяжется с вами в ближайшее время.</p><form class="form form--modal" data-form><input name="name" required placeholder="Ваше имя" /><input name="phone" required placeholder="Телефон" /><button class="button button--dark">Отправить заявку <span>→</span></button></form></div></div>
+  <div class="toast" role="status">Спасибо! Заявка принята.</div>
+  <script src="script.js"></script>
+  <script src="header.js"></script>
+</body>
+</html>

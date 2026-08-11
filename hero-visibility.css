@@ -1,0 +1,5 @@
+.hero--intro::before {
+  inset: 0;
+  filter: none;
+  transform: none;
+}
