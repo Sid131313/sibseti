@@ -1,0 +1,20 @@
+Options -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# Keep local development unaffected; canonicalize only the production host.
+RewriteCond %{HTTP_HOST} ^www\.sibirset-connect\.ru$ [NC]
+RewriteRule ^ https://sibirset-connect.ru%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^sibirset-connect\.ru$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://sibirset-connect.ru%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^([a-z0-9-]+)/index\.html$ /$1/ [R=301,L]
+
+# Add the canonical trailing slash only for existing city directories.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^([a-z0-9-]+)$ /$1/ [R=301,L]

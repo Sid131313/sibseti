@@ -9,10 +9,6 @@
   if (!header || !cityTrigger || !cityPanel) return;
 
   const cityLinks = document.querySelectorAll('.city-panel a, .cities__list a');
-  cityLinks.forEach(link => {
-    const city = link.textContent.trim();
-    link.href = `index.html?city=${encodeURIComponent(city)}`;
-  });
 
   const setCityOpen = open => {
     header.classList.toggle('is-city-open', open);
@@ -31,7 +27,7 @@
     if (isScrolled) setCityOpen(false);
   };
 
-  const selectedCity = new URLSearchParams(window.location.search).get('city')?.trim();
+  const selectedCity = document.body.dataset.cityName?.trim();
   const storedCity = localStorage.getItem('sibseti-city');
   if (selectedCity) localStorage.setItem('sibseti-city', selectedCity);
   if ((selectedCity || storedCity) && cityName) cityName.textContent = selectedCity || storedCity;
@@ -42,8 +38,8 @@
   window.addEventListener('scroll', updateScrolledState, { passive: true });
   updateScrolledState();
 
-  cityPanel.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    const city = link.textContent.trim();
+  cityLinks.forEach(link => link.addEventListener('click', () => {
+    const city = link.dataset.cityName || link.textContent.trim();
     localStorage.setItem('sibseti-city', city);
     if (cityName) cityName.textContent = city;
   }));

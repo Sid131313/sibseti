@@ -3,7 +3,7 @@ const modalTitle = document.querySelector('#modal-title');
 const toast = document.querySelector('.toast');
 
 function getCurrentCity() {
-  return new URLSearchParams(window.location.search).get('city')?.trim()
+  return document.body.dataset.cityName?.trim()
     || localStorage.getItem('sibseti-city')
     || document.querySelector('[data-current-city]')?.textContent.trim()
     || 'Новосибирск';
