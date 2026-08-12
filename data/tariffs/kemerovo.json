@@ -1,0 +1,6 @@
+[
+  {"id":"kemerovo-internet-na-vse-100","city":"kemerovo","category":"internet","name":"На все 100","speed":100,"tv_channels":null,"price":500,"connection_price":0,"router":"Wi-Fi роутер","features":["Безлимитный интернет"],"source_url":"https://sibsetipro.ru/kemerovo/","active":true,"sort":10,"updated_at":"2026-08-12T00:00:00+00:00"},
+  {"id":"kemerovo-internet-na-vse-300","city":"kemerovo","category":"internet","name":"На все 300","speed":300,"tv_channels":null,"price":700,"connection_price":0,"router":"Wi-Fi роутер","features":["Безлимитный интернет"],"source_url":"https://sibsetipro.ru/kemerovo/","active":true,"sort":20,"updated_at":"2026-08-12T00:00:00+00:00"},
+  {"id":"kemerovo-internet-tv-smotri-onlayn","city":"kemerovo","category":"internet_tv","name":"Смотри онлайн","speed":100,"tv_channels":150,"price":620,"connection_price":0,"router":"Wi-Fi роутер","features":[],"source_url":"https://sibsetipro.ru/kemerovo/","active":true,"sort":10,"updated_at":"2026-08-12T00:00:00+00:00"},
+  {"id":"kemerovo-internet-tv-vse-vklyucheno","city":"kemerovo","category":"internet_tv","name":"Всё включено","speed":500,"tv_channels":200,"price":950,"connection_price":0,"router":"Wi-Fi роутер","features":[],"source_url":"https://sibsetipro.ru/kemerovo/","active":true,"sort":20,"updated_at":"2026-08-12T00:00:00+00:00"}
+]

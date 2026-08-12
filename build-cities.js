@@ -47,8 +47,8 @@ for (const city of cities) {
     return slug ? `/${slug}/` : '/novosibirsk/';
   });
   html = html.replace(/<a class="is-current" href="\/novosibirsk\/">Новосибирск<\/a>/, `<a class="is-current" href="/novosibirsk/">Новосибирск</a>`);
-  html = html.replace(/<a([^>]*) href="\/${city.slug}\/"([^>]*)>([^<]+)<\/a>/g, (all, left, right, label) => `<a${left} href="/${city.slug}/"${right} data-city-name="${city.name}">${label}</a>`);
-  html = html.replace(/<a([^>]*) href="\/novosibirsk\/"([^>]*)>Новосибирск<\/a>/g, (all, left, right) => `<a${left} href="/novosibirsk/"${right} data-city-name="Новосибирск">Новосибирск</a>`);
+  html = html.replace(/<a([^>]*) href="\/${city.slug}\/"([^>]*)>([^<]+)<\/a>/g, (all, left, right, label) => `<a${left} href="/${city.slug}/"${right}>${label}</a>`);
+  html = html.replace(/<a([^>]*) href="\/novosibirsk\/"([^>]*)>Новосибирск<\/a>/g, (all, left, right) => `<a${left} href="/novosibirsk/"${right}>Новосибирск</a>`);
   html = localPaths(html);
   html = html.replaceAll('name="city" value="" data-city-field', `name="city" value="${city.name}" data-city-field`);
   const folder = path.join(root, city.slug);
@@ -62,7 +62,7 @@ let home = source.replace(/https:\/\/sibsetipro\.ru\/(?:[a-z-]+)?\/?/g, match =>
 });
 home = home.replace(/<a([^>]*) href="\/([a-z-]+)\/"([^>]*)>([^<]+)<\/a>/g, (all, left, slug, right, label) => {
   const city = cities.find(item => item.slug === slug);
-  return city ? `<a${left} href="/${city.slug}/"${right} data-city-name="${city.name}">${label}</a>` : all;
+  return city ? `<a${left} href="/${city.slug}/"${right}>${label}</a>` : all;
 });
 fs.writeFileSync(path.join(root, 'index.html'), home);
 

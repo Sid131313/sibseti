@@ -1,0 +1,7 @@
+# Copy this file to .htaccess on Beget and replace both placeholders.
+# Create the password file outside public_html:
+#   htpasswd -c /home/ACCOUNT/.tariffs.htpasswd ADMIN_LOGIN
+AuthType Basic
+AuthName "Tariff administration"
+AuthUserFile /home/ACCOUNT/.tariffs.htpasswd
+Require valid-user

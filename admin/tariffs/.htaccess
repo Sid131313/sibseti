@@ -1,0 +1,3 @@
+# Secure by default. Replace this file with .htaccess.example after setting
+# the absolute AuthUserFile path for the Beget account.
+Require all denied

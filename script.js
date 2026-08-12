@@ -14,13 +14,18 @@ function setModalCity() {
   if (cityField) cityField.value = getCurrentCity();
 }
 
-document.querySelectorAll('[data-modal]').forEach(button => button.addEventListener('click', () => {
+function openModal(button) {
+  const tariff = button.dataset.tariffPayload ? JSON.parse(button.dataset.tariffPayload) : null;
   modalTitle.textContent = button.dataset.tariff ? `Тариф «${button.dataset.tariff}»` : 'Заказать звонок';
   setModalCity();
+  let input = modal.querySelector('input[name="tariff_data"]');
+  if (!input) { input = document.createElement('input'); input.type = 'hidden'; input.name = 'tariff_data'; modal.querySelector('[data-form]')?.append(input); }
+  input.value = tariff ? JSON.stringify(tariff) : '';
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
-}));
+}
+document.addEventListener('click', event => { const button = event.target.closest('[data-modal]'); if (button) openModal(button); });
 
 function closeModal() { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
 document.querySelector('.modal__close').addEventListener('click', closeModal);
