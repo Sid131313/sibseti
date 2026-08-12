@@ -209,11 +209,29 @@
   .connection-check__inner {
     padding: 34px 25px;
   }
+
+  .connection-check__visual {
+    width: calc(100% + 25px);
+    margin: 30px -25px -34px auto;
+    overflow: hidden;
+    border-radius: 0 0 18px 0;
+  }
+
+  .connection-check__visual img {
+    object-fit: contain;
+  }
 }
 
 @media (max-width: 420px) {
   .connection-check__inner {
     padding: 29px 20px;
+  }
+
+  .connection-check__visual {
+    width: calc(100% + 20px);
+    margin-right: -20px;
+    margin-bottom: -29px;
+    border-radius: 0 0 14px 0;
   }
 
   .connection-check h2 {
