@@ -33,6 +33,7 @@ for (const city of cities) {
   html = html.replace('<link rel="canonical" href="https://sibirset-connect.ru/" />', `<link rel="canonical" href="${domain}/${city.slug}/" />`);
   html = html.replace(/<title>[^<]*<\/title>/, `<title>Сибсети в ${city.inCity} — тарифы на домашний интернет и ТВ</title>`);
   html = html.replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="Подключить домашний интернет Сибсети в ${city.inCity}. Актуальные тарифы, интернет и телевидение, оборудование и проверка возможности подключения по адресу." />`);
+  html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${domain}/${city.slug}/" />`);
   html = html.replace('<body data-city-name="">', `<body data-city-name="${city.name}">`);
   html = html.replace('<span data-current-city>Новосибирск</span>', `<span data-current-city>${city.name}</span>`);
   html = html.replace('Домашний интернет <span>Сибсети</span>', `Домашний интернет <span>Сибсети</span><br />в ${city.inCity}`);
