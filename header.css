@@ -3,6 +3,26 @@
 @media(max-width:900px){.header__top-inner{height:51px;width:100%}.support-link{font-size:14px;margin-left:9px}.connection-link{display:none}.city-trigger{margin-left:auto;margin-right:9px;font-size:16px;gap:5px}.city-trigger svg{width:19px;height:19px}.header__inner{height:82px;width:100%;padding:0 11px;position:relative}.logo--image img{width:280px;max-width:calc(100vw - 225px)}.nav--new{display:none;margin:0}.header__button{display:none}.mobile-call{display:grid;place-items:center;width:46px;height:46px;margin-left:auto;border-radius:50%;background:#1761f7;color:#fff}.mobile-call svg{width:25px;height:25px;fill:#fff;stroke:#fff;stroke-width:.7}.menu--new{display:block;width:47px;padding:9px 0;margin-left:13px}.menu--new span{width:36px;height:5px;margin:4px 0;border-radius:5px;background:#1761f7}.header{border-bottom:3px solid #1761f7}.header.is-menu-open .nav--new{display:flex;position:absolute;z-index:25;top:82px;left:0;right:0;padding:15px 18px 19px;background:#fff;box-shadow:0 12px 18px #15203a1f;flex-direction:column;align-items:flex-start;gap:12px}.header.is-menu-open .menu--new span:nth-child(1){transform:translateY(9px) rotate(45deg)}.header.is-menu-open .menu--new span:nth-child(2){opacity:0}.header.is-menu-open .menu--new span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}.city-panel{inset:51px 0 auto;max-height:calc(100vh - 51px)}.city-panel__inner{padding:22px 16px 28px;width:100%}.city-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.city-grid section:last-child{grid-column:span 2}.city-panel__heading h2{font-size:23px}}
 @media(max-width:560px){.logo--image img{width:280px;max-width:calc(100vw - 211px)}.city-grid{grid-template-columns:1fr;gap:25px}.city-grid section:last-child{grid-column:auto}.city-grid section>div{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 12px}.city-panel__heading{margin-bottom:19px}.city-panel__heading h2{font-size:21px}}
 
+@media(max-width:900px){
+  .mobile-call svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: phone-ring 2.8s ease-in-out infinite;
+    transform-origin: 50% 65%;
+  }
+}
+
+@keyframes phone-ring {
+  0%, 78%, 100% { transform: rotate(0); }
+  82% { transform: rotate(-14deg); }
+  86% { transform: rotate(12deg); }
+  90% { transform: rotate(-9deg); }
+  94% { transform: rotate(6deg); }
+}
+
 /* Compact header state */
 .header {
   position: fixed;
@@ -134,7 +154,9 @@
   .nav--new,
   .button--blue,
   .mobile-call,
+  .mobile-call svg,
   .menu--new span {
     transition: none;
+    animation: none;
   }
 }

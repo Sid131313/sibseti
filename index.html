@@ -35,7 +35,7 @@
       <a class="logo logo--image" href="#top" aria-label="Сибирские сети"><img src="img/sibseti.png" alt="Сибсети" /></a>
       <nav class="nav nav--new" aria-label="Основная навигация"><a href="#internet">Домашний интернет</a><a href="#tv">Интернет + ТВ</a><a href="#tv">Цифровое ТВ</a></nav>
       <button class="button button--blue header__button" data-modal="callback">Заказать звонок</button>
-      <a class="mobile-call" href="tel:+79235128301" aria-label="Позвонить"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.1 3.6 4.9 5.1c-.7.5-1 1.3-.8 2.1 1.5 6.9 6.9 12.3 13.8 13.8.8.2 1.6-.1 2.1-.8l1.5-2.2c.5-.8.4-1.8-.3-2.4l-2.4-2c-.6-.5-1.5-.5-2.1 0l-1.4 1.1a11.5 11.5 0 0 1-6-6l1.1-1.4c.5-.6.5-1.5 0-2.1l-2-2.4c-.6-.7-1.6-.8-2.3-.3Z"/></svg></a>
+      <a class="mobile-call" href="tel:+79235128301" aria-label="Позвонить"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.65 2.63a2 2 0 0 1-.45 2.11L8.04 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.31 1.73.53 2.63.65A2 2 0 0 1 22 16.92Z"/></svg></a>
       <button class="menu menu--new" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
     <div class="wrap header__inner header__inner--legacy">
@@ -86,7 +86,7 @@
           <label><span>Телефон</span><input name="phone" required inputmode="tel" placeholder="+7 (___) ___-__-__" /></label>
           <label><span>Адрес подключения</span><input name="address" required placeholder="Улица, дом" /></label>
           <button class="button button--dark" type="submit">Отправить заявку <span>→</span></button>
-          <label class="form__consent"><input name="consent" type="checkbox" required /><span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a> и <a href="data-processing-policy.html">Политикой обработки персональных данных</a>.</span></label>
+          <label class="form__consent"><input name="consent" type="checkbox" required checked /><span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a> и <a href="data-processing-policy.html">Политикой обработки персональных данных</a>.</span></label>
         </form>
       </div>
     </section>
@@ -111,7 +111,7 @@
               <button class="button button--blue" type="submit">Проверить возможность <span>→</span></button>
             </div>
             <label class="connection-check__consent">
-              <input name="consent" type="checkbox" required />
+              <input name="consent" type="checkbox" required checked />
               <span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a>, <a href="data-processing-policy.html">Политикой обработки персональных данных</a> и <a href="privacy-policy.html">Политикой конфиденциальности</a>.</span>
             </label>
           </form>
@@ -195,13 +195,29 @@
       </div>
     </section>
 
-    <section class="consult" aria-labelledby="consult-title"><div class="wrap consult__inner"><div class="consult__content"><p class="eyebrow">Остались вопросы?</p><h2 id="consult-title">Поможем выбрать<br />лучший тариф</h2><p>Оставьте номер телефона — специалист перезвонит для консультации.</p></div><form class="consult__form" data-form><label><span class="sr-only">Ваше имя</span><input name="name" required placeholder="Ваше имя" /></label><label><span class="sr-only">Телефон</span><input name="phone" required inputmode="tel" placeholder="Телефон" /></label><button class="button button--blue">Заказать консультацию <span>→</span></button><label class="form__consent"><input name="consent" type="checkbox" required /><span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a>.</span></label></form></div></section>
+    <section class="consult" aria-labelledby="consult-title"><div class="wrap consult__inner"><div class="consult__content"><p class="eyebrow">Остались вопросы?</p><h2 id="consult-title">Поможем выбрать<br />лучший тариф</h2><p>Оставьте номер телефона — специалист перезвонит для консультации.</p></div><form class="consult__form" data-form><label><span class="sr-only">Ваше имя</span><input name="name" required placeholder="Ваше имя" /></label><label><span class="sr-only">Телефон</span><input name="phone" required inputmode="tel" placeholder="Телефон" /></label><button class="button button--blue">Заказать консультацию <span>→</span></button><label class="form__consent"><input name="consent" type="checkbox" required checked /><span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a>.</span></label></form></div></section>
 
     <section class="cities section" id="cities" aria-labelledby="cities-title"><div class="wrap"><p class="eyebrow">География подключения</p><div class="cities__heading"><h2 id="cities-title">Подключаем в городах Сибири</h2><p>Выберите город, чтобы перейти на его страницу.</p></div><div class="cities__columns"><section class="cities__region"><h3>Новосибирская область</h3><ul class="cities__list"><li><a href="https://sibsetipro.ru/akademgorodok/">Академгородок</a></li><li><a href="https://sibsetipro.ru/barabinsk/">Барабинск</a></li><li><a href="https://sibsetipro.ru/berdsk/">Бердск</a></li><li><a href="https://sibsetipro.ru/iskitim/">Искитим</a></li><li><a href="https://sibsetipro.ru/karasuk/">Карасук</a></li><li><a href="https://sibsetipro.ru/koltsovo/">Кольцово</a></li><li><a href="https://sibsetipro.ru/kuybyshev/">Куйбышев</a></li><li><a href="https://sibsetipro.ru/">Новосибирск</a></li><li><a href="https://sibsetipro.ru/ob/">Обь</a></li></ul></section><section class="cities__region"><h3>Кемеровская область</h3><ul class="cities__list"><li><a href="https://sibsetipro.ru/anzhero-sudzhensk/">Анжеро‑Судженск</a></li><li><a href="https://sibsetipro.ru/belovo/">Белово</a></li><li><a href="https://sibsetipro.ru/berezovskiy/">Берёзовский</a></li><li><a href="https://sibsetipro.ru/gurevsk/">Гурьевск</a></li><li><a href="https://sibsetipro.ru/kemerovo/">Кемерово</a></li><li><a href="https://sibsetipro.ru/novokuznetsk/">Новокузнецк</a></li><li><a href="https://sibsetipro.ru/prokopevsk/">Прокопьевск</a></li><li><a href="https://sibsetipro.ru/topki/">Топки</a></li><li><a href="https://sibsetipro.ru/yurga/">Юрга</a></li></ul></section><section class="cities__region"><h3>Алтайский и Красноярский края</h3><ul class="cities__list"><li><a href="https://sibsetipro.ru/barnaul/">Барнаул</a></li><li><a href="https://sibsetipro.ru/biysk/">Бийск</a></li><li><a href="https://sibsetipro.ru/zarinsk/">Заринск</a></li><li><a href="https://sibsetipro.ru/rubtsovsk/">Рубцовск</a></li><li><a href="https://sibsetipro.ru/abakan/">Абакан</a></li><li><a href="https://sibsetipro.ru/achinsk/">Ачинск</a></li><li><a href="https://sibsetipro.ru/divnogorsk/">Дивногорск</a></li><li><a href="https://sibsetipro.ru/krasnoyarsk/">Красноярск</a></li><li><a href="https://sibsetipro.ru/minusinsk/">Минусинск</a></li></ul></section></div></div></section>
   </main>
-  <footer class="footer" id="privacy"><div class="wrap footer__legal"><a class="footer__brand" href="#top" aria-label="Сибсети — на главную"><img src="img/sibseti.png" alt="Сибсети" /></a><div class="footer__legal-text">Вся информация на сайте размещена на основании партнерского договора с ООО «Сибирские Сети». Посещая сайт <a href="#top"><strong>sibirset-connect.ru</strong></a>, Вы предоставляете согласие на обработку данных (cookies и иных пользовательских данных) на условиях <a href="data-processing-policy.html"><strong>Политики обработки персональных данных</strong></a>. Указанные данные могут использоваться системами Google Analytics, Яндекс.Метрика и другими для функционирования сайта. Отправляя заявку, Вы принимаете <a href="privacy-policy.html"><strong>Политику конфиденциальности</strong></a> и даёте согласие на обработку персональных данных.</div></div></footer>
-  <div class="modal" id="modal"><div class="modal__box"><button class="modal__close" aria-label="Закрыть">×</button><p class="eyebrow eyebrow--green">Подключение</p><h2 id="modal-title">Оставьте заявку</h2><p class="modal__text">Специалист свяжется с вами в ближайшее время.</p><form class="form form--modal" data-form><input name="name" required placeholder="Ваше имя" /><input name="phone" required placeholder="Телефон" /><button class="button button--dark">Отправить заявку <span>→</span></button><label class="form__consent"><input name="consent" type="checkbox" required /><span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a>.</span></label></form></div></div>
+  <footer class="footer" id="privacy"><div class="wrap footer__legal"><a class="footer__brand" href="#top" aria-label="Сибсети — на главную"><img src="img/sibseti.png" alt="Сибсети" /></a><div class="footer__legal-text">Вся информация на сайте размещена на основании партнерского договора с ООО «Сибирские Сети». Посещая сайт <a href="#top"><strong>sibirset-connect.ru</strong></a>, Вы предоставляете согласие на обработку данных (cookies и иных пользовательских данных) на условиях <a href="data-processing-policy.html"><strong>Политики обработки персональных данных</strong></a>. Указанные данные могут использоваться системами Google Analytics, Яндекс.Метрика и другими для функционирования сайта. Отправляя заявку, Вы принимаете <a href="privacy-policy.html"><strong>Политику конфиденциальности</strong></a> и даёте согласие на обработку персональных данных.</div><a class="button button--max footer__max-button" href="https://max.ru/id165609296354_2_bot?start=1722236775891455609" target="_blank" rel="noopener noreferrer"><img src="img/max.svg" alt="" aria-hidden="true" />Написать в MAX</a></div></footer>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" aria-label="Закрыть">×</button>
+      <p class="modal__eyebrow">Подключение</p>
+      <h2 id="modal-title">Оставьте заявку</h2>
+      <p class="modal__text">Специалист свяжется с вами в ближайшее время.</p>
+      <form class="form form--modal" data-form>
+        <label><span>Ваше имя</span><input name="name" required placeholder="Введите имя" /></label>
+        <label><span>Телефон</span><input name="phone" required inputmode="tel" placeholder="+7 (___) ___-__-__" /></label>
+        <label><span>Город</span><input name="city" required readonly /></label>
+        <button class="button button--blue" type="submit">Отправить заявку <span>→</span></button>
+        <a class="button button--max" href="https://max.ru/id165609296354_2_bot?start=1722236775891455609" target="_blank" rel="noopener noreferrer"><img src="img/max.svg" alt="" aria-hidden="true" />Написать в MAX</a>
+        <label class="form__consent"><input name="consent" type="checkbox" required checked /><span>Я даю согласие на обработку персональных данных в соответствии с <a href="personal-data-consent.html">Согласием</a>.</span></label>
+      </form>
+    </div>
+  </div>
   <div class="toast" role="status">Спасибо! Заявка принята.</div>
+  <script src="city-context.js"></script>
   <script src="script.js"></script>
   <script src="header.js"></script>
 </body>

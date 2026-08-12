@@ -2,13 +2,27 @@ const modal = document.querySelector('#modal');
 const modalTitle = document.querySelector('#modal-title');
 const toast = document.querySelector('.toast');
 
+function getCurrentCity() {
+  return new URLSearchParams(window.location.search).get('city')?.trim()
+    || localStorage.getItem('sibseti-city')
+    || document.querySelector('[data-current-city]')?.textContent.trim()
+    || 'Новосибирск';
+}
+
+function setModalCity() {
+  const cityField = modal.querySelector('input[name="city"]');
+  if (cityField) cityField.value = getCurrentCity();
+}
+
 document.querySelectorAll('[data-modal]').forEach(button => button.addEventListener('click', () => {
   modalTitle.textContent = button.dataset.tariff ? `Тариф «${button.dataset.tariff}»` : 'Заказать звонок';
+  setModalCity();
   modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }));
 
-function closeModal() { modal.classList.remove('is-open'); document.body.style.overflow = ''; }
+function closeModal() { modal.classList.remove('is-open'); modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
 document.querySelector('.modal__close').addEventListener('click', closeModal);
 modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });

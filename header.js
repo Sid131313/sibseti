@@ -11,7 +11,7 @@
   const cityLinks = document.querySelectorAll('.city-panel a, .cities__list a');
   cityLinks.forEach(link => {
     const city = link.textContent.trim();
-    link.href = `city.html?city=${encodeURIComponent(city)}`;
+    link.href = `index.html?city=${encodeURIComponent(city)}`;
   });
 
   const setCityOpen = open => {
@@ -31,8 +31,10 @@
     if (isScrolled) setCityOpen(false);
   };
 
+  const selectedCity = new URLSearchParams(window.location.search).get('city')?.trim();
   const storedCity = localStorage.getItem('sibseti-city');
-  if (storedCity && cityName) cityName.textContent = storedCity;
+  if (selectedCity) localStorage.setItem('sibseti-city', selectedCity);
+  if ((selectedCity || storedCity) && cityName) cityName.textContent = selectedCity || storedCity;
 
   cityTrigger.addEventListener('click', () => setCityOpen(!header.classList.contains('is-city-open')));
   closeCity?.addEventListener('click', () => setCityOpen(false));
